@@ -10,8 +10,6 @@
 - The problem statement is included. The following sections describe the assignment submission requirements and how to use the starter codes.
 
 ## Problem Statement & Starter Codes: col380_lab4_suite
-
-## col380_lab4_suite
 - Problem Statement: Implement Parallel Periodic Pattern Matching using MPI
 - Cloned from: https://github.com/dvynjli/col380_lab4_suite/
 
