@@ -1,5 +1,19 @@
-# col380_lab4_suite
-Problem Statement: Implement Parallel Periodic Pattern Matching using MPI
+# Overview 
+- **Contains: A highly optimised Parallelised patterns-matching algorithm implementation in C++ using the MPI distributed computing standard** 
+- **Problem:** Given a text string and a set of patterns to be matched, find all occurrences of every pattern in the text
+- **Strategy:** Executing a linear-time pattern matching algorithm on multiple patterns concurrently
+- MPI C++ file: *lab4_mpi.cpp*
+- **Algorithm:** Described in included problem statement doc
+- I/O: I/O format can be understood from the included header files and sample testcase files.
+- Literature reference used included in repository. 
+- This programming assignment was undertaken by the owner in April 2019 as a part of lab requirements in the course COL380: Introduction to Parallel Programming and Distributed Computing (Sem-II, 2018-19) (instructor Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi. 
+- The problem statement is included. The following sections describe the assignment submission requirements and how to use the starter codes.
+
+## Problem Statement & Starter Codes: col380_lab4_suite
+
+## col380_lab4_suite
+- Problem Statement: Implement Parallel Periodic Pattern Matching using MPI
+- Cloned from: https://github.com/dvynjli/col380_lab4_suite/
 
 ## Directories and files
 `testcase/`: contains python script `gen_testcase.py` for sample testcase generation  
