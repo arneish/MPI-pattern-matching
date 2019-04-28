@@ -51,11 +51,22 @@ Arguments:
             -------------------------------------------------------------------------------------------------
             | ... ... ... ... ... ... | match(pattern[num_patterns-1])[#matches(pattern[num_patterns-1])-1] |
             -------------------------------------------------------------------------------------------------
-    computation_time : Time elapsed in computing periodic patterns
+    computation_time : Time elapsed in computing periodic pattern matching
 */
 void write_result (
         int *match_counts, 
         int *matches, 
         double computation_time);
+
+
+/* 
+Function to check the format of output code.
+You can call it from main to check if the array returned from your code matches with our specifications
+This is a dummy function. It is not the function that will be used for evaluation.
+*/
+void format_checker (
+        int num_patterns,
+        int *match_counts, 
+        int *matches);
 
 #endif

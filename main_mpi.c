@@ -9,7 +9,7 @@
 		arg: input filename (consist text, pattern_set)
 */
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc < 2){
 		printf("\nLess Arguments\n");
@@ -32,8 +32,8 @@ int main(int argc, char const *argv[])
 	int* 	matches;		// set of all match of each pattern_i in text (to be computed)
 	//---------------------------------------------------------------------
 
-	double start_time, end_time;
-	double computation_time;
+	double start_time, computation_time, total_time;
+	int id;
 
 	/*
 		-- Pre-defined function --
@@ -41,6 +41,8 @@ int main(int argc, char const *argv[])
 	    see lab4_io.h for details
 	*/
 	read_data (argv[1], &n, &text, &num_patterns, &m_set, &p_set, &pattern_set);
+
+	MPI_Init(&argc, &argv);
 
 	start_time = MPI_Wtime();
 	
@@ -59,15 +61,21 @@ int main(int argc, char const *argv[])
 		&match_counts, 
 		&matches);
 
-	end_time = MPI_Wtime();
-	computation_time = end_time - start_time;
+	computation_time = MPI_Wtime() - start_time;
 	
-	/*
-		--Pre-defined functions --
-		checks for correctness of results computed by SVD and PCA
+	MPI_Reduce(&computation_time, &total_time, 1, MPI_DOUBLE, MPI_MAX, 0, MPI_COMM_WORLD);
+	
+	MPI_Comm_rank(MPI_COMM_WORLD, &id);
+	if (id == 0) {
+		/*
+		--Pre-defined function --
+		checks for correctness of results computed by periodic_pattern_matching
 		and outputs the results
-	*/
-	write_result(match_counts, matches, computation_time);
+		*/
+		write_result(match_counts, matches, total_time);
+	}
+
+	MPI_Finalize();
 
 	return 0;
 }

@@ -44,3 +44,19 @@ void write_result (
 {
 	printf("\nTime elapsed: %f\n", computation_time);
 }
+
+void format_checker (
+        int num_patterns,
+        int *match_counts, 
+        int *matches)
+{
+	int index=0;
+	for (int i=0; i<num_patterns; i++) {
+		printf("pattern %d found at %d locations:\n", i, match_counts[i]);
+		for (int j=0; j<match_counts[i]; j++) {
+			printf("%d\t", matches[index]);
+			index++;
+		}
+		printf("\n");
+	}	
+}
