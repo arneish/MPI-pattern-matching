@@ -1,5 +1,5 @@
 # Overview 
-- **Contains: A highly optimised Parallelised patterns-matching algorithm implementation in C++ using the MPI distributed computing standard** 
+- **Contains: *A highly optimised Parallelised patterns-matching algorithm implementation in C++ using the MPI distributed computing standard*** 
 - **Problem:** Given a text string and a set of patterns to be matched, find all occurrences of every pattern in the text
 - **Strategy:** Executing a linear-time pattern matching algorithm on multiple patterns concurrently
 - MPI C++ file: *lab4_mpi.cpp*
