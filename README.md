@@ -6,7 +6,7 @@
 - **Algorithm:** Described in included problem statement doc
 - I/O: I/O format can be understood from the included header files and sample testcase files.
 - Literature reference used included in repository. 
-- This programming assignment was undertaken by the owner in April 2019 as a part of lab requirements in the course *COL380: Introduction to Parallel Programming and Distributed Computing (Sem-II, 2018-19)* (instructor Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi. 
+- Assignment attempted as a part of coursework requirements in COL380: Introduction to Parallel Programming and Distributed Computing (Sem-II, 2018-19) (Instructor: Prof. Subodh V. Sharma) at Indian Institute of Technology (IIT), Delhi. 
 - The problem statement is included. The following sections describe the assignment submission requirements and how to use the starter codes.
 
 ## Problem Statement & Starter Codes: col380_lab4_suite
